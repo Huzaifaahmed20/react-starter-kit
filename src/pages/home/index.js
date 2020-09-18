@@ -1,11 +1,11 @@
 import React from 'react';
-import { Counter } from '../../features/counter/Counter';
+import { CreatePost } from '../../features/posts/CreatePost';
 
 export const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <Counter />
+      <CreatePost />
     </div>
   );
 };
