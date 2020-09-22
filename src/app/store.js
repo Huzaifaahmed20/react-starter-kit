@@ -1,10 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import postReducer from '../features/posts/PostReducer';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import postReducer from '../features/posts/postsStore/PostReducer';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
     post: postReducer,
   },
+  middleware: [
+    ...getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  ],
 });

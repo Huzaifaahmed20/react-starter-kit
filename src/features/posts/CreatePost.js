@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { savePost } from './postsStore/PostActions';
 
 export const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
     const postData = {
@@ -10,7 +13,7 @@ export const CreatePost = () => {
       body,
       userId: 2,
     };
-    console.log(postData);
+    dispatch(savePost(postData));
   };
   return (
     <div>

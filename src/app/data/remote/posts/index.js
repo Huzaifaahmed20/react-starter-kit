@@ -1,6 +1,6 @@
 import api from '..';
 
-const createPost = async (data) => {
+const createPostApi = async (data) => {
   try {
     return await api.post('/posts', data);
   } catch (e) {
@@ -8,7 +8,7 @@ const createPost = async (data) => {
   }
 };
 
-const fetchAllPosts = async () => {
+const fetchAllPostsApi = async () => {
   try {
     return await api.get('/posts');
   } catch (e) {
@@ -16,14 +16,7 @@ const fetchAllPosts = async () => {
   }
 };
 
-const fetchSinglePost = async (id) => {
-  try {
-    return await api.get(`/posts/${id}`);
-  } catch (e) {
-    return e;
-  }
-};
 // export const UPDATE_POST = '/posts'; //put
 // export const DELETE_POST = '/posts'; //delete
 
-export { createPost, fetchAllPosts, fetchSinglePost };
+export { createPostApi, fetchAllPostsApi };
