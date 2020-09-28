@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllPosts } from './postsStore/PostActions';
+import { fetchAllPosts } from '../features/posts/PostActions';
 
-export default function ViewPosts() {
+export const ViewPosts = () => {
   const { posts } = useSelector((state) => state.post);
   const dispatch = useDispatch();
 
@@ -16,4 +16,4 @@ export default function ViewPosts() {
       })}
     </ul>
   );
-}
+};

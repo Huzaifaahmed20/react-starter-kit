@@ -1,8 +1,5 @@
 import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
-import {
-  createPostApi,
-  fetchAllPostsApi,
-} from '../../../app/data/remote/posts';
+import { createPostApi, fetchAllPostsApi } from '../../app/data/remote/posts';
 import { CREATE_POST, READ_POSTS } from './constants';
 
 const makePost = createAction(CREATE_POST);

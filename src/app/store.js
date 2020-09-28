@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import postReducer from '../features/posts/postsStore/PostReducer';
+import postReducer from '../features/posts/PostReducer';
 
 export default configureStore({
   reducer: {
